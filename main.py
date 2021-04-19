@@ -15,7 +15,7 @@ def save_log(date_of_mess: str, mess: str, chat_name: str):
 
 
 def get_channel_id_dict() -> dict:
-    """Возвращает словарь id по названия каналов на которые подписан пользователь"""
+    """Возвращает словарь id по названию каналов на которые подписан пользователь"""
     ch_dict = {}
     for dialog in client.iter_dialogs():
         id_dict = dialog.message.peer_id.__dict__
