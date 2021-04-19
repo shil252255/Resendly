@@ -53,7 +53,7 @@ def resend_channel(ch_name: str):
     return TO_CHAT_NAME[FROM_CHAT_NAME.index(ch_name)]
 
 
-@client.on(events.NewMessage(chats=TO_CHAT_NAME))
+@client.on(events.NewMessage(chats=FROM_CHAT_NAME))
 async def normal_handler(event):
     channel_name, date_of_mess, mess = event_data_extractor(event)
     send_mess = date_of_mess + '\n' + mess
